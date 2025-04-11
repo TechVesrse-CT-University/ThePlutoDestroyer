@@ -96,7 +96,6 @@ jupyter notebook HACKATHON/backend/Train_plant_disease-checkpoint.ipynb
 
 ## 🙌 Core Team
 - **Backend Lead**: [HARSHITA005-GARG](https://github.com/HARSHITA005-GARG)
-- **Data Science**: @AgriMLTeam
-- **Frontend**: @FarmUIExperts
+
 
 > **Note**: Production deployment guidelines available in [DEPLOYMENT.md](DEPLOYMENT.md)
