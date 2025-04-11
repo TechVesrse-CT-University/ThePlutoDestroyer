@@ -1,86 +1,102 @@
-# 🚀 ThePlutoDestroyer: Next-Gen Agricultural Intelligence Platform
-**Winning Solution @ TechVerse CT University Hackathon 2025**  
-![Build Status](https://img.shields.io/github/actions/workflow/status/TechVesrse-CT-University/ThePlutoDestroyer/build.yml?style=flat-square)
-![Dependencies](https://img.shields.io/librariesio/github/TechVesrse-CT-University/ThePlutoDestroyer?style=flat-square)
+# 🌦️ AgriWeather Intelligence Platform
+**2025 TechVerse CT University Hackathon Winning Solution**  
+![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue)
+![FastAPI](https://img.shields.io/badge/Framework-FastAPI-green)
+![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB)
 
-## 🌱 Mission Statement
-Revolutionizing agricultural decision-making through:
-- **Real-time weather pattern analysis** (weather-backend)
-- **AI-powered crop recommendations** (kisan vikas modules)
-- **Farmer-centric interface** (React frontend)
+## 🌟 Key Features
+- Real-time weather data processing pipeline
+- Crop recommendation system with ML integration
+- Disease prediction using deep learning models
+- Farmer-friendly React dashboard
 
-## 💡 Core Features
-<div align="center">
-
-| Module | Key Capabilities | Tech Stack |
-|--------|------------------|------------|
-| **Weather Analytics** | Predictive modeling, Historical data analysis | Python, TensorFlow, PostgreSQL |
-| **Kisan Vikas** | Crop suggestions, Market trends | React, Chart.js, REST API |
-| **Farmer Portal** | Multilingual support, SMS alerts | Material-UI, Twilio integration |
-
-</div>
-
-## 🛠️ Project Architecture
+## 🏗️ Project Structure
 ```bash
 ThePlutoDestroyer/
-├── HACKATHON/
-│   ├── backend/                  # Microservice architecture
-│   │   └── training.py    # ML models for yield prediction
-│   ├── frontend/
-│   │   ├── public/               # Localization assets
-│   │   └── src/                  # React components
-│   └── weather-backend/          # Meteorological data pipeline
+└── HACKATHON/
+    ├── backend/
+    │   ├── Diseases.png                      # Disease classification samples
+    │   ├── Train_plant_disease-checkpoint.ipynb  # Model training notebook
+    │   ├── trained_plant_disease_model.keras # Pretrained CNN model
+    │   └── training_hist.json                # Training metrics
+    ├── frontend/kisan vikas/                 # Farmer dashboard
+    │   ├── public/                           # Static assets
+    │   └── src/                              # React components
+    └── weather-backend/                      # Core weather service
+        ├── app.py                            # FastAPI endpoints
+        ├── crop_data.csv                     # Agricultural dataset
+        └── requirements.txt                  # Python dependencies
 ```
 
-## ⚡ Quick Start
-### Prerequisites
-- Node.js 18.x | Python 3.10+
-
-
+## 🚀 Quick Start
+### Backend Setup
 ```bash
-# Clone with submodules
-git clone --recurse-submodules https://github.com/TechVesrse-CT-University/ThePlutoDestroyer.git
+cd HACKATHON/weather-backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app:app --reload
+```
 
-# Frontend setup
+### Frontend Setup
+```bash
 cd HACKATHON/frontend/kisan\ vikas
 npm install
-cp .env.example .env
-npm run build
-
-# Backend services
-cd ../../weather-backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python run main.py
+npm run dev
 ```
 
-## 🌐 Deployment Topology
+## 🔍 Core Components
+### Weather Service (FastAPI)
+Endpoints:
+```python
+@app.get("/weather/predict")
+async def predict_weather(lat: float, lon: float):
+    # Integration with IMD APIs
+    return {"prediction": "sunny"}
+
+@app.post("/crop/recommend")
+async def recommend_crop(soil_data: SoilSchema):
+    # ML model integration
+    return {"crop": "wheat"}
+```
+
+### Disease Prediction Model
+Load pretrained Keras model:
+```python
+from tensorflow.keras.models import load_model
+model = load_model('trained_plant_disease_model.keras')
+```
+
+## 📊 Data Flow
 ```mermaid
-graph TD
-  A[Farmer Mobile] --> B(API Gateway)
-  B --> C{Microservices}
+graph LR
+  A[Farmer Input] --> B(React Frontend)
+  B --> C{FastAPI Gateway}
   C --> D[Weather Service]
-  C --> E[Crop Advisor]
-  C --> F[Market Analyzer]
+  C --> E[Crop Recommender]
+  C --> F[Disease Predictor]
   D --> G[(PostgreSQL)]
   E --> H[(ML Models)]
 ```
 
-## 🤝 Contributing
-We welcome technical contributions through:
-1. **Issue Tracking**: Report bugs via GitHub Issues
-2. **Feature Development**: 
-   - Fork → Feature Branch → Pull Request
-   - Follow Angular Commit Message Convention
-3. **Documentation**: Improve docs via Wiki edits
+## 🧪 Testing
+Run Jupyter notebook for model evaluation:
+```bash
+jupyter notebook HACKATHON/backend/Train_plant_disease-checkpoint.ipynb
+```
 
-## 📌 Roadmap
-- Q2 2025: Regional language support (Hindi/Tamil)
-- Q3 2025: IoT integration for soil sensors
-- Q4 2025: Government API integration (e-NAM)
+## 🤝 Contribution
+1. Fork the repository
+2. Create feature branch:
+   ```bash
+   git checkout -b feat/new-weather-endpoint
+   ```
+3. Commit changes following [Conventional Commits](https://www.conventionalcommits.org)
+4. Open Pull Request
 
-## 🙌 Acknowledgments
-- **Hackathon Mentors**: TechVerse CT University Panel
-- **Core Team**: [HARSHITA005-GARG](https://github.com/HARSHITA005-GARG) et al.
-- **Data Partners**: IMD, NASSCOM AgriTech
+## 🙌 Core Team
+- **Backend Lead**: [HARSHITA005-GARG](https://github.com/HARSHITA005-GARG)
+- **Data Science**: @AgriMLTeam
+- **Frontend**: @FarmUIExperts
+
+> **Note**: Production deployment guidelines available in [DEPLOYMENT.md](DEPLOYMENT.md)
