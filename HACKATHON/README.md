@@ -25,19 +25,17 @@ Revolutionizing agricultural decision-making through:
 ThePlutoDestroyer/
 ├── HACKATHON/
 │   ├── backend/                  # Microservice architecture
-│   │   └── predictive_models/    # ML models for yield prediction
+│   │   └── training.py    # ML models for yield prediction
 │   ├── frontend/
 │   │   ├── public/               # Localization assets
 │   │   └── src/                  # React components
-│   │       ├── dashboard/        # Real-time analytics
-│   │       └── api/              # Service layer
 │   └── weather-backend/          # Meteorological data pipeline
 ```
 
 ## ⚡ Quick Start
 ### Prerequisites
 - Node.js 18.x | Python 3.10+
-- PostgreSQL 14+ | Redis 6+
+
 
 ```bash
 # Clone with submodules
@@ -54,7 +52,7 @@ cd ../../weather-backend
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-uvicorn main:app --reload
+python run main.py
 ```
 
 ## 🌐 Deployment Topology
