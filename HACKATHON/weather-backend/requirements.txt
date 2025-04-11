@@ -1,0 +1,8 @@
+python-dotenv
+requests
+Flask
+pandas
+numpy
+twilio
+flask_cors
+setuptools

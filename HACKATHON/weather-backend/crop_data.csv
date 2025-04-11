@@ -1,0 +1,9 @@
+crop,min_temp,max_temp,min_humidity,max_rain
+Wheat,10,25,40,50
+Rice,20,35,70,150
+Maize,15,30,50,60
+Sugarcane,21,30,60,100
+Cotton,21,35,50,75
+Soybean,20,30,50,60
+Barley,10,25,30,40
+Millet,15,35,30,50

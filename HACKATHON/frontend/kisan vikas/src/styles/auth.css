@@ -1,0 +1,86 @@
+.auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+  
+  .auth-box {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .auth-box h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #2e7d32;
+  }
+  
+  .auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .auth-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2e7d32;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .auth-box button:hover {
+    background-color: #1b5e20;
+  }
+  
+  .switch {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .switch span {
+    color: #2e7d32;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .enquiry {
+    font-size: 14px;
+    margin-top: 20px;
+    font-style: italic;
+    color: #444;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .auth-box {
+      padding: 20px;
+    }
+  
+    .auth-box h2 {
+      font-size: 22px;
+    }
+  }
+  
