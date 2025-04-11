@@ -1,0 +1,121 @@
+/* Base Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Font and Background */
+  .soil-container {
+    font-family: "Poppins", sans-serif;
+    background: #f4fdfc;
+    color: #1e2d2f;
+    padding: 3rem 1rem;
+    max-width: 1300px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 20px;
+    border-radius: 2%;
+  }
+  
+  /* Hero Section */
+  .soil-hero {
+    background: linear-gradient(135deg, #c7f9cc, #80ed99, #57cc99);
+    padding: 4rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .soil-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #073b4c;
+    margin-bottom: 1rem;
+  }
+  
+  .soil-hero p {
+    font-size: 1.2rem;
+    color: #073b4ccf;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Grid for Feature Cards */
+  .features-grid {
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  /* Feature Card Styling */
+  .feature-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  }
+  
+  .feature-card h2 {
+    font-size: 1.4rem;
+    color: #2a9d8f;
+    margin-bottom: 0.8rem;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: #3d3d3d;
+    line-height: 1.6;
+  }
+  
+  /* Call To Action Section */
+  .soil-cta {
+    text-align: center;
+    background: #d8f3dc;
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    margin-top: 3rem;
+  }
+  
+  .soil-cta h3 {
+    font-size: 2rem;
+    color: #1b4332;
+    margin-bottom: 1rem;
+  }
+  
+  .soil-cta p {
+    font-size: 1.1rem;
+    color: #2d6a4f;
+    margin-bottom: 2rem;
+  }
+  
+  /* Button */
+  .start-button {
+    padding: 14px 34px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #40916c;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  .start-button:hover {
+    background-color: #2d6a4f;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
